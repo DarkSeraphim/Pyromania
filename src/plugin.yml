@@ -1,0 +1,32 @@
+name: Pyromania
+main: com.github.DarkSeraphim.Pyromania.Pyromania
+version: 1.1.1
+
+commands:
+  pyro:
+    description: toggle the flamethrower
+    usage: /<command> [player]
+
+permissions:
+  pyro.*:
+    children:
+      pyro.toggle.*: true
+      pyro.auto: true
+      pyro.reload: true
+  pyro.toggle.*:
+    children:
+      pyro.toggle.self: true
+      pyro.toggle.other: true
+  pyro.toggle.self:
+    description: Toggle your own flamethrower
+    default: op
+  pyro.toggle.other:
+    description: Toggle someone elses flamethrower
+    default: false
+  pyro.auto:
+    description: If permission is given, users automatically have pyro enabled on join
+    default: op
+  pyro.reload:
+    description: Reload the config of Pyromania
+    default: op
+      

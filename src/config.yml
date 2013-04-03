@@ -1,0 +1,16 @@
+# I measure the distance in lived ticks
+# So they do not fly into eternity
+#
+# External toggle means by anything besides the Player
+pyro:
+  tool: 369
+  ammo:
+    id: 263
+    amount: 1 
+  spread: 0.4
+  max-lived-ticks: 10
+  amount: 10
+  external-toggle: true
+  particles-enabled: true
+  auto-enable: false
+  create-fire: false
